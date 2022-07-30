@@ -1,0 +1,6 @@
+init_config:
+
+instances:
+  - host: 127.0.0.1
+    api_key: asdfasdfasdfasdfasdf
+    protocol: http
