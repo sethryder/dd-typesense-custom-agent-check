@@ -1,1 +1,411 @@
-{"title":"Typesense - Overview","description":"","widgets":[{"id":1679924841009558,"definition":{"title":"Search Requests","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"time":{},"type":"timeseries","requests":[{"formulas":[{"formula":"query1"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.search_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query1"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":0,"y":0,"width":6,"height":3}},{"id":4641559391306776,"definition":{"title":"Search Latency","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"time":{},"type":"timeseries","requests":[{"formulas":[{"formula":"query1"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.search_latency_ms{*} by {typesense_host}","data_source":"metrics","name":"query1"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":6,"y":0,"width":6,"height":3}},{"id":8552605224533992,"definition":{"title":"All Requests","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"horizontal","legend_columns":["avg","min","max","value","sum"],"time":{},"type":"timeseries","requests":[{"formulas":[{"alias":"Total","formula":"query1"},{"alias":"Deletes","formula":"query2"},{"alias":"Writes","formula":"query3"},{"alias":"Imports","formula":"query4"},{"alias":"Search","formula":"query5"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.total_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query1"},{"query":"avg:typesense.delete_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query2"},{"query":"avg:typesense.write_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query3"},{"query":"avg:typesense.import_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query4"},{"query":"avg:typesense.search_requests_per_second{*} by {typesense_host}","data_source":"metrics","name":"query5"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":0,"y":3,"width":4,"height":3}},{"id":7296091176979897,"definition":{"title":"All Latencies","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"time":{},"type":"timeseries","requests":[{"formulas":[{"alias":"Total","formula":"query1"},{"alias":"Search","formula":"query2"},{"alias":"Delete","formula":"query3"},{"alias":"Import","formula":"query4"},{"alias":"Write","formula":"query5"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.latency{*} by {typesense_host}","data_source":"metrics","name":"query1"},{"query":"avg:typesense.search_latency_ms{*} by {typesense_host}","data_source":"metrics","name":"query2"},{"query":"avg:typesense.delete_latency_ms{*} by {typesense_host}","data_source":"metrics","name":"query3"},{"query":"avg:typesense.import_latency_ms{*} by {typesense_host}","data_source":"metrics","name":"query4"},{"query":"avg:typesense.write_latency_ms{*} by {typesense_host}","data_source":"metrics","name":"query5"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":4,"y":3,"width":4,"height":3}},{"id":4435019880237340,"definition":{"title":"Active Memory Usage","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"time":{},"type":"timeseries","requests":[{"formulas":[{"formula":"query1"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.memory_active_bytes{*} by {typesense_host}","data_source":"metrics","name":"query1"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":8,"y":3,"width":4,"height":3}},{"id":6364979801155237,"definition":{"title":"System CPU Usage","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"type":"timeseries","requests":[{"formulas":[{"formula":"query1"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.system.cpu_active_percentage{*} by {typesense_host}","data_source":"metrics","name":"query1"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":0,"y":6,"width":3,"height":3}},{"id":5417951826787714,"definition":{"title":"System Memory Usage","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"type":"timeseries","requests":[{"formulas":[{"formula":"query1"},{"formula":"query2"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.system.memory_used_bytes{*} by {typesense_host}","data_source":"metrics","name":"query1"},{"query":"avg:typesense.system.memory_total_bytes{*} by {typesense_host}","data_source":"metrics","name":"query2"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":3,"y":6,"width":3,"height":3}},{"id":7142608746145478,"definition":{"title":"System Network Usage","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"type":"timeseries","requests":[{"formulas":[{"formula":"per_second(query1)"},{"formula":"per_second(query2)"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.system.network_received_bytes{*} by {typesense_host}","data_source":"metrics","name":"query1"},{"query":"avg:typesense.system.network_received_bytes{*} by {typesense_host}","data_source":"metrics","name":"query2"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":6,"y":6,"width":3,"height":3}},{"id":4299888755954464,"definition":{"title":"System Disk Usage","title_size":"16","title_align":"left","show_legend":true,"legend_layout":"auto","legend_columns":["avg","min","max","value","sum"],"type":"timeseries","requests":[{"formulas":[{"alias":"Used","formula":"query1"},{"alias":"Total","formula":"query2"}],"response_format":"timeseries","queries":[{"query":"avg:typesense.system.disk_used_bytes{*} by {typesense_host}","data_source":"metrics","name":"query1"},{"query":"avg:typesense.system.disk_total_bytes{*} by {typesense_host}","data_source":"metrics","name":"query2"}],"style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"},"display_type":"line"}]},"layout":{"x":9,"y":6,"width":3,"height":3}}],"template_variables":[],"layout_type":"ordered","is_read_only":true,"notify_list":[],"reflow_type":"fixed","id":"2a7-rfu-yxv"}
+{
+	"title": "Typesense - Overview",
+	"description": "",
+	"widgets": [{
+		"id": 1679924841009558,
+		"definition": {
+			"title": "Search Requests",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Search Requests",
+					"formula": "query1"
+				}],
+				"queries": [{
+					"query": "avg:typesense.search_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 0,
+			"y": 0,
+			"width": 6,
+			"height": 3
+		}
+	}, {
+		"id": 4641559391306776,
+		"definition": {
+			"title": "Search Latency",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Search Latency",
+					"formula": "query1"
+				}],
+				"queries": [{
+					"query": "avg:typesense.search_latency_ms{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 6,
+			"y": 0,
+			"width": 6,
+			"height": 3
+		}
+	}, {
+		"id": 8552605224533992,
+		"definition": {
+			"title": "All Requests",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "horizontal",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Total",
+					"formula": "query1"
+				}, {
+					"alias": "Deletes",
+					"formula": "query2"
+				}, {
+					"alias": "Writes",
+					"formula": "query3"
+				}, {
+					"alias": "Imports",
+					"formula": "query4"
+				}, {
+					"alias": "Search",
+					"formula": "query5"
+				}],
+				"response_format": "timeseries",
+				"queries": [{
+					"query": "avg:typesense.total_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}, {
+					"query": "avg:typesense.delete_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query2"
+				}, {
+					"query": "avg:typesense.write_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query3"
+				}, {
+					"query": "avg:typesense.import_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query4"
+				}, {
+					"query": "avg:typesense.search_requests_per_second{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query5"
+				}],
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 0,
+			"y": 3,
+			"width": 4,
+			"height": 3
+		}
+	}, {
+		"id": 7296091176979897,
+		"definition": {
+			"title": "All Latencies",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Total",
+					"formula": "query1"
+				}, {
+					"alias": "Search",
+					"formula": "query2"
+				}, {
+					"alias": "Delete",
+					"formula": "query3"
+				}, {
+					"alias": "Import",
+					"formula": "query4"
+				}, {
+					"alias": "Write",
+					"formula": "query5"
+				}],
+				"response_format": "timeseries",
+				"queries": [{
+					"query": "avg:typesense.latency{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}, {
+					"query": "avg:typesense.search_latency_ms{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query2"
+				}, {
+					"query": "avg:typesense.delete_latency_ms{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query3"
+				}, {
+					"query": "avg:typesense.import_latency_ms{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query4"
+				}, {
+					"query": "avg:typesense.write_latency_ms{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query5"
+				}],
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 4,
+			"y": 3,
+			"width": 4,
+			"height": 3
+		}
+	}, {
+		"id": 4435019880237340,
+		"definition": {
+			"title": "Active Memory Usage",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Active Memory",
+					"formula": "query1"
+				}],
+				"queries": [{
+					"query": "avg:typesense.memory_active_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 8,
+			"y": 3,
+			"width": 4,
+			"height": 3
+		}
+	}, {
+		"id": 6364979801155237,
+		"definition": {
+			"title": "System CPU Usage",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "CPU Usage",
+					"formula": "query1"
+				}],
+				"queries": [{
+					"query": "avg:typesense.system.cpu_active_percentage{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 0,
+			"y": 6,
+			"width": 3,
+			"height": 3
+		}
+	}, {
+		"id": 5417951826787714,
+		"definition": {
+			"title": "System Memory Usage",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Used Memory",
+					"formula": "query1"
+				}, {
+					"alias": "Total Memory",
+					"formula": "query2"
+				}],
+				"queries": [{
+					"query": "avg:typesense.system.memory_used_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}, {
+					"query": "avg:typesense.system.memory_total_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query2"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 3,
+			"y": 6,
+			"width": 3,
+			"height": 3
+		}
+	}, {
+		"id": 7142608746145478,
+		"definition": {
+			"title": "System Network Usage",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Received",
+					"formula": "per_second(query1)"
+				}, {
+					"alias": "Sent",
+					"formula": "per_second(query2)"
+				}],
+				"queries": [{
+					"query": "avg:typesense.system.network_received_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}, {
+					"query": "avg:typesense.system.network_sent_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query2"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 6,
+			"y": 6,
+			"width": 3,
+			"height": 3
+		}
+	}, {
+		"id": 4299888755954464,
+		"definition": {
+			"title": "System Disk Usage",
+			"title_size": "16",
+			"title_align": "left",
+			"show_legend": true,
+			"legend_layout": "auto",
+			"legend_columns": ["avg", "min", "max", "value", "sum"],
+			"time": {},
+			"type": "timeseries",
+			"requests": [{
+				"formulas": [{
+					"alias": "Used Disk",
+					"formula": "query1"
+				}, {
+					"alias": "Total Disk",
+					"formula": "query2"
+				}],
+				"queries": [{
+					"query": "avg:typesense.system.disk_used_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query1"
+				}, {
+					"query": "avg:typesense.system.disk_total_bytes{*} by {typesense_host}",
+					"data_source": "metrics",
+					"name": "query2"
+				}],
+				"response_format": "timeseries",
+				"style": {
+					"palette": "dog_classic",
+					"line_type": "solid",
+					"line_width": "normal"
+				},
+				"display_type": "line"
+			}]
+		},
+		"layout": {
+			"x": 9,
+			"y": 6,
+			"width": 3,
+			"height": 3
+		}
+	}],
+	"template_variables": [],
+	"layout_type": "ordered",
+	"is_read_only": true,
+	"notify_list": [],
+	"reflow_type": "fixed",
+	"id": "2a7-rfu-yxv"
+}
