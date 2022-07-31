@@ -1,5 +1,5 @@
 # dd-typesense-custom-agent-check
-A custom [Typesense](https://typesense.org/) agent check for [Datadog](https://www.datadoghq.com/). 
+A [Datadog](https://www.datadoghq.com/) custom agent check for [Typesense](https://typesense.org/).
 
 ![Example metrics](/example_metrics.png)
 
