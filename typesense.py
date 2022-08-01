@@ -1,5 +1,6 @@
 import urllib.request
 import json
+
 from checks import AgentCheck
 
 class TypesenseCheck(AgentCheck):
