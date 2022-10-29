@@ -2,5 +2,5 @@ init_config:
 
 instances:
   - host: 127.0.0.1:8108
-    api_key: asdfasdfasdfasdfasdf
+    api_key: insert_api_key_here
     protocol: http
