@@ -24,7 +24,6 @@ class TypesenseCheck(AgentCheck):
         else:
           self.gauge('typesense.' + metric_name.replace('typesense_', ''), metric, tags=['typesense_host:' + host])
 
-
     #stats
     req = urllib.request.Request(protocol + '://' + host + '/stats.json', headers=headers)
     with urllib.request.urlopen(req) as response:
